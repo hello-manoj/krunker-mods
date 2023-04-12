@@ -390,7 +390,7 @@ a {
 /*Section III: Menu*/
 
 #mainLogo {
-  content: url(https://raw.githubusercontent.com/hello-manoj/krunker-mods/main/logo_2.PNG);
+  content: url(../img/logo_2.PNG);
   transform: scale(1.5);
 }
 #mainLogoFace {
