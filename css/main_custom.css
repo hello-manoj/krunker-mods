@@ -13,11 +13,8 @@
 }
 
 .menuItemTitle {
-  color: var(--accent) !important;
-}
-
-.menuItem:hover > .menuItemTitle {
-  color: white !important;
+  color: #ffffff8e !important;
+  text-transform: uppercase;
 }
 
 .menuDebugInfo {
@@ -111,11 +108,6 @@
 
 #krRewardsInfo > div > div > span {
   color: var(--accent) !important;
-}
-
-#ingameFPS {
-  color: #00ff00 !important;
-  font-size: 30px !important;
 }
 
 #pingIcon {
@@ -316,15 +308,15 @@ a {
 }
 
 #chatList {
-  backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(20px) !important;
   text-align: left;
   height: 400px !important;
-  border: 4px solid #ffffff6c;
   padding-left: 10px;
+  background-color: transparent !important;
 }
 #chatInputHolder {
+  background-color: transparent !important;
   backdrop-filter: blur(10px) !important;
-  border: 2px solid #ffffff6c;
 }
 #chatList::-webkit-scrollbar {
   width: 4px;
@@ -390,7 +382,7 @@ a {
 /*Section III: Menu*/
 
 #mainLogo {
-  content: url(../img/logo_2.PNG);
+  content: url(../img/logo_2.png);
   transform: scale(1.5);
 }
 #mainLogoFace {
@@ -412,10 +404,9 @@ a {
 
 /*Headers*/
 .headerBar {
-  background-color: #00000031;
+  background-color: transparent;
   border-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: 4px solid #fafafa60;
+  backdrop-filter: blur(30px);
   margin: 20px;
 }
 .headerBarRight {
@@ -507,19 +498,20 @@ a {
 }
 #spectButton span {
   font-size: 25px !important;
-  color: white !important;
+  color: #ffffffa4 !important;
 }
 /*Menu Buttons*/
 
 #subLogoButtons {
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  height: 60px;
-  border: solid 3px #ffffff69;
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.199);
+  backdrop-filter: blur(20px);
+  height: 40px;
+  border: solid 10px #ffffff42;
+  border-radius: 40px;
   bottom: 120px;
-  padding-top: 10px;
+  padding: 10px 20px;
   transform: translate(-50%, 0);
+  transition: all 0.05s linear;
 }
 
 #subLogoButtons > .button {
@@ -529,13 +521,48 @@ a {
   box-shadow: none !important;
   text-shadow: none !important;
   font-size: 24px !important;
-  transition-duration: 0.25s;
+  transition: all 0.05s linear;
+  color: #ffffff9c;
+  text-transform: uppercase;
 }
 
-#subLogoButtons > .button:hover {
-  transform: unset;
-  color: var(--accent);
+/* buttons  */
+#menuBtnHost:hover {
+  color: #cd82ff !important;
 }
+
+#subLogoButtons:has(#menuBtnHost:hover) {
+  border-color: #cd82ff55 !important;
+  background-color: #cd82ff20;
+}
+
+#menuBtnBrowser:hover {
+  color: #ff6969 !important;
+}
+
+#subLogoButtons:has(#menuBtnBrowser:hover) {
+  border-color: #ff696955 !important;
+  background-color: #ff696920;
+}
+
+#inviteButton:hover {
+  color: #7ad9ff !important;
+}
+
+#subLogoButtons:has(#inviteButton:hover) {
+  border-color: #7ad9ff55 !important;
+  background-color: #7ad9ff20;
+}
+
+#menuBtnJoin:hover {
+  color: #5bff92 !important;
+}
+
+#subLogoButtons:has(#menuBtnJoin:hover) {
+  border-color: #5bff9255 !important;
+  background-color: #5bff9220;
+}
+/* buttons  */
 
 #mapInfoHld {
   display: none;
@@ -547,14 +574,19 @@ a {
   bottom: 30px;
   left: 50%;
   width: unset;
-  height: 70px;
-  background-color: rgba(0, 0, 0, 0.158);
-  backdrop-filter: blur(10px);
-  padding: 2px;
-  border: solid 2px #ffffff80;
-  border-radius: 6px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(20px);
+  padding: 5px 10px;
+  border: solid 5px #00000031;
+  border-radius: 40px;
   transform: translateX(-50%);
+  transition: all 0.1s linear;
 }
+#menuItemContainer:has(.menuItem:hover) {
+  border: solid 5px #52ff9aa1;
+}
+
 #menuItemContainer > div > span {
   display: none;
 }
@@ -574,11 +606,11 @@ a {
 .menuItem .menuItemTitle {
   margin: 0;
   font-size: 24px !important;
-  transition-duration: 0.25s;
+  transition-duration: 0.05s;
 }
 
 .menuItem:hover > .menuItemTitle {
-  color: #80f0ff;
+  color: #4bff87 !important;
 }
 
 /*Menu Window*/
@@ -839,12 +871,13 @@ a {
 #policeButton {
   position: absolute;
   right: -150px;
-  bottom: 0px;
+  bottom: -10px;
   height: 64px;
   width: 64px;
   background-color: #0000001a;
   backdrop-filter: blur(10px);
   border: 5px solid #fff !important;
+  border-radius: 50%;
 }
 #policeButton img {
   height: 60px !important;
@@ -1463,21 +1496,6 @@ input[type="color"] {
   font-size: 55px;
 }
 
-#timerDisplay {
-  display: none !important;
-}
-
-#timerVal {
-  text-shadow: 2px 2px 4px #000 !important;
-}
-
-#timerIcon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(5);
-  text-shadow: 2px 2px 0px #000 !important;
-}
-
 .leftUIB {
   background-color: transparent;
 }
@@ -1662,47 +1680,65 @@ input[type="color"] {
 /* ========== */
 
 #curGameInfo {
-  font-size: 25px;
-  margin: 20px !important;
+  font-size: 20px;
+  margin: 50px 20px 20px 10px !important;
 }
 #fpsDisplay,
 #pingDisplay {
-  font-size: 30px !important;
+  font-size: 25px !important;
   display: block !important;
 }
-#pingText {
-  font-size: 30px !important;
+#ingameFPS {
+  color: #00ff00 !important;
+  font-size: 25px !important;
 }
-#pingDisplay {
-  font-size: 40px !important;
+#pingText {
+  font-size: 25px !important;
+}
+#pingIcon {
+  font-size: 30px !important;
 }
 .debugInfo {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   vertical-align: top;
-  width: 280px;
+  width: 270px;
   background: #00000025;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 5px 15px;
+  height: 45px;
 }
 
 #topLeftHolder {
   border-radius: 10px;
   text-align: left;
   width: 300px;
-  background: #0000001a;
+  background: transparent;
   left: 20px;
-  backdrop-filter: blur(10px);
-  border: solid 2px white;
+  backdrop-filter: blur(20px);
 }
 
 #teamScores {
   padding: 5px 10px;
-  background-color: #0000002f;
+  background-color: transparent;
   border-radius: 10px;
   width: 280px;
   display: flex !important;
   justify-content: space-around;
+}
+
+#timerDisplay {
+  position: absolute;
+  top: 60px;
+}
+#timerVal {
+  font-size: 27px;
+  padding: 0 100px;
+  color: #00ff88 !important;
+}
+
+#timerIcon {
+  display: none !important;
 }
